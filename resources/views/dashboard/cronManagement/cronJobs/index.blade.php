@@ -36,7 +36,7 @@
                                     <tr>
                                         <td>Property Cron</td>
                                         <td class="project-actions text-right">
-                                            <a class="btn btn-info btn-sm" href="{{ route('cronjob/property/addxml') }}"
+                                            <a class="btn btn-info btn-sm" href=""
                                                 target="_blank">
                                                 <i class="fas fa-cog"></i>
                                                 Run
@@ -47,7 +47,7 @@
                                         <td>Property Main Image Cron</td>
                                         <td class="project-actions text-right">
                                             <a class="btn btn-info btn-sm"
-                                                href="{{ route('cronjob/property/addxmlMainImg') }}" target="_blank">
+                                                href="" target="_blank">
                                                 <i class="fas fa-cog"></i>
                                                 Run
                                             </a>
@@ -57,7 +57,7 @@
                                         <td>Property gallery Cron</td>
                                         <td class="project-actions text-right">
                                             <a class="btn btn-info btn-sm"
-                                                href="{{ route('cronjob/property/addxmlSubImg') }}" target="_blank">
+                                                href="" target="_blank">
                                                 <i class="fas fa-cog"></i>
                                                 Run
                                             </a>

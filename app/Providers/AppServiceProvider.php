@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use App\Models\PageTag;
-use App\Models\Service;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
@@ -38,7 +37,6 @@ class AppServiceProvider extends ServiceProvider
         Paginator::useBootstrap();
 
         $pagemeta = null;
-        $serviceFoot = [];
         $website_name = null;
         $logo = null;
         $favicon = null;
@@ -172,13 +170,6 @@ class AppServiceProvider extends ServiceProvider
 
         ]);
 
-        if (Schema::hasTable('services')) {
-            if(Service::active()->exists()){
-               $serviceFoot =  Service::mainService()->active()->take(7)->get();
-                View::share('serviceFoot', $serviceFoot);
-
-            }
-        }
         if (Schema::hasTable('page_tags')) {
             if(PageTag::where('page_name',Route::currentRouteName())->exists()){
                $pagemeta =  PageTag::where('page_name',Route::currentRouteName())->first();
@@ -186,7 +177,6 @@ class AppServiceProvider extends ServiceProvider
 
             }
         }
-        View::share('serviceFoot', $serviceFoot);
         View::share('pagemeta', $pagemeta);
 
     }
